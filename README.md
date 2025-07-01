@@ -1,1 +1,1 @@
-React Native apss using Expo
+React Native apps using Expo
