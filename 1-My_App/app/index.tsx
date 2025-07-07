@@ -1,15 +1,33 @@
-import { View, Text } from "react-native"
+import { View, Text, StyleSheet } from "react-native";
+import CustomButton from "../components/CustomButton";
+import { useRouter } from "expo-router";
 
 const Index = () => {
-return (
-  <View style={{ flex: 1,
-    backgroundColor: "red",
-    justifyContent: "center",
-    alignItems: "center"
-   }}>
-    <Text style={{ fontSize: 30, fontWeight: 700, color: "white" }}>Hello Mudassir Hi Mudassir</Text>
-  </View>
-);
+  const router = useRouter();
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Welcome to the App</Text>
+
+      <CustomButton title="Login" onPress={() => router.push("/login")} />
+      <CustomButton title="Sign Up" onPress={() => router.push("/signup")} />
+    </View>
+  );
 };
 
-export default Index
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: 20,
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: "bold",
+    marginBottom: 30,
+    textAlign: "center",
+  },
+});
+
+export default Index;
