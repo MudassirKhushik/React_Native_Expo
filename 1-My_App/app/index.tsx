@@ -11,6 +11,7 @@ const Index = () => {
 
       <CustomButton title="Login" onPress={() => router.push("/login")} />
       <CustomButton title="Sign Up" onPress={() => router.push("/signup")} />
+      <CustomButton title="Scroll Properties" onPress={() => router.push("/scrollProps")} />
     </View>
   );
 };
